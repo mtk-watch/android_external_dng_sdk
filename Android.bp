@@ -161,4 +161,10 @@ cc_binary_host {
         "libz",
         "libjpeg",
     ],
+
+    target: {
+        darwin: {
+            enabled: false, // b/67474260
+        },
+    },
 }
