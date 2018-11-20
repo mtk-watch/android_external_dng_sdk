@@ -113,12 +113,13 @@ cc_library{
     ],
 
     target: {
-        host: {
+        linux_glibc: {
             static_libs: ["libcompiler_rt-extras"],
         },
         darwin: {
-            // TODO(b/67474260) Turn this back on
-            enabled: false,
+            host_ldlibs: [
+                "-framework AppKit",
+            ],
         },
     },
 
